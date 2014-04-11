@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/login_background">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" 
+        android:src="@drawable/logo_blanc"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >  
+
+        <LinearLayout
+            android:id="@+id/login_button_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/Username"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:hint="@string/enter_username_hint"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@+id/Password"
+                android:nextFocusUp="@+id/LoginButton" />
+
+            <EditText
+                android:id="@+id/Password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:hint="@string/enter_password_hint"
+                android:inputType="textPassword" />
+
+            <CheckBox
+                android:id="@+id/rememberCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"
+                android:text="@string/remember_me" />
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"  
+                android:text="@string/login" 
+                android:textColor="#FFFFFF"             
+                android:background="#47a447"/>
+            
+            <Button
+                android:id="@+id/create_account_button"                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/create_account_text"
+                android:textColor="#FFFFFF"  
+                android:background="#428bca" />
+        </LinearLayout>
+       
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/version_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="v1.0.0"
+            android:textSize="10sp"
+            android:textColor="#000" />
+        <TextView
+            android:id="@+id/alteraid_logo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:text="© 2014"
+            android:textSize="10sp"
+            android:textColor="#000" />
+
+        <ImageView
+            android:id="@+id/alteraid_logo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@+id/alteraid_logo_text"
+            android:src="@drawable/ic_launcher"
+             />
+     
+    </RelativeLayout>
+
+</LinearLayout>
