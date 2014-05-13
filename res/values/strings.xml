@@ -4,13 +4,43 @@
     <string name="app_name">PyctoApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    
+
     <!-- CreateAccountActivity & LoginActivity strings -->
     <string name="enter_username_hint">Username</string>
-	<string name="enter_password_hint">Password</string>
-	<string name="login">Sign in</string>
-	<string name="remember_me">Remember me</string>
-	<string name="create_account_text">Sign up</string>
-	<string name="user_password_incorrect">Incorrect username or password.</string>
-	
+    <string name="enter_password_hint">Password</string>
+    <string name="login">Sign in</string>
+    <string name="remember_me">Remember me</string>
+    <string name="create_account_text">Sign up</string>
+    <string name="user_password_incorrect">Incorrect username or password.</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="image_header">Image header</string>
+    
+    <!-- Navigation Drawer -->
+    <string-array name="planets_array">
+        <item>Perfil</item>
+        <item>Subir foto</item>
+        <item>Ver fotos</item>
+        <item>Bases</item>
+        <item>Votar</item>
+    </string-array>
+    
+    <string-array name="titles_array">
+        <item>PyctoApp</item>
+        <item>Perfil</item>
+        <item>Subir foto</item>
+        <item>Ver fotos</item>
+        <item>Bases</item>
+        <item>Votar</item>
+    </string-array>
+    
+	<string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_websearch">Web search</string>
+    
 </resources>
