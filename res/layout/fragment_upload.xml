@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+        
+        <TextView
+            android:id="@+id/upload_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/upload_photo"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <RelativeLayout
+            android:id="@+id/thumbnail"
+	        android:layout_width="146dp"
+	        android:layout_height="146dp"
+	        android:layout_marginTop="30dp"
+	        android:layout_below="@id/upload_photo"
+	        android:layout_centerHorizontal="true" 
+	        android:background="@drawable/thumbnail_border">
+
+	        <ImageView
+	            android:id="@+id/user_icon"
+	            android:layout_width="144dp"
+	            android:layout_height="144dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginTop="25dp"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/ic_action_picture" />
+	        
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/browse_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/thumbnail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_gray_border"
+            android:drawableLeft="@drawable/ic_action_collection"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/browse_button"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/upload_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/browse_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_register_border"
+            android:drawableLeft="@drawable/ic_action_upload"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/upload_button"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+        <!-- android:drawablePadding="-15dp" -->
+        <!-- android:paddingLeft="10dp" /> -->
+
+    </RelativeLayout>
+
