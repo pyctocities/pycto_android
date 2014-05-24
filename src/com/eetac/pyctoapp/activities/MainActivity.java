@@ -3,11 +3,13 @@ package com.eetac.pyctoapp.activities;
 import java.util.Locale;
 
 import com.eetac.pyctoapp.R;
+import com.eetac.pyctoapp.adapter.ImageAdapter;
 
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -22,9 +24,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,11 +43,14 @@ public class MainActivity extends Activity {
     private CharSequence mTitle;
     private String[] mPlanetTitles;
     private String[] navTitles;
+    public static Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        mContext = getApplicationContext();
 
         mTitle = mDrawerTitle = getTitle();
         mPlanetTitles = getResources().getStringArray(R.array.planets_array);
@@ -56,7 +64,7 @@ public class MainActivity extends Activity {
 
         View header = getLayoutInflater().inflate(R.layout.header, null);
         mDrawerList.addHeaderView(header);
-        
+
         // set up the drawer's list view with items and click listener
         mDrawerList.setAdapter(new ArrayAdapter<String>(this,
                 R.layout.drawer_list_item, mPlanetTitles));
@@ -185,48 +193,59 @@ public class MainActivity extends Activity {
         public PlanetFragment() {
             // Empty constructor required for fragment subclasses
         }
-
+        
+        public View rootView;
+        
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_planet, container, false);
+           // View rootView;
             int i = getArguments().getInt(ARG_PLANET_NUMBER);
             
-            TextView textDrawer = (TextView) rootView.findViewById(R.id.fragment_text);
+           
             Log.d("position", Integer.toString(i));
             
             switch (i) {
-			case 0:
-				
-	            textDrawer.setText("Usuario");
+			case 0: //Header del usuario
+				rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+
 				
 				break;
 				
-			case 1:
-				
-	            textDrawer.setText("Perfil");
+			case 1: //Perfil
+				rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+
 			
 				break;
 				
-			case 2:
-				
-	            textDrawer.setText("Subir foto");
+			case 2: //Subir foto
+				rootView = inflater.inflate(R.layout.fragment_upload, container, false);
 				
 				break;
 				
-			case 3:
+			case 3: //Ver fotos en la galería
+				rootView = inflater.inflate(R.layout.fragment_gallery, container, false);
+			    GridView gridview = (GridView) rootView.findViewById(R.id.gridview);
+			    gridview.setAdapter(new ImageAdapter(mContext));
+
+			    gridview.setOnItemClickListener(new OnItemClickListener() {
+			        public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+			            Toast.makeText(mContext, "" + position, Toast.LENGTH_SHORT).show();
+			        }
+			    });
 				
-				textDrawer.setText("Ver fotos");
+				
+
 				break;
 				
-			case 4:
-				
-				textDrawer.setText("Bases del concurso");
+			case 4: //Bases del concurso
+				rootView = inflater.inflate(R.layout.fragment_terms, container, false);
+
 				break;
 				
-			case 5:
-				
-				textDrawer.setText("Votar");
+			case 5: //Ubicación de las fotos
+				rootView = inflater.inflate(R.layout.fragment_map, container, false);
+
 				break;
 
 			default:

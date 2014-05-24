@@ -27,7 +27,7 @@
         <item>Subir foto</item>
         <item>Ver fotos</item>
         <item>Bases</item>
-        <item>Votar</item>
+        <item>Mapa</item>
     </string-array>
     
     <string-array name="titles_array">
@@ -36,11 +36,25 @@
         <item>Subir foto</item>
         <item>Ver fotos</item>
         <item>Bases</item>
-        <item>Votar</item>
+        <item>Mapa</item>
     </string-array>
     
 	<string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="action_websearch">Web search</string>
+    
+    <!-- Upload photo fragment -->
+    <string name="upload_photo">Escoge una foto para el concurso</string>
+    <string name="upload_button">Subir foto</string>
+    <string name="browse_button">Seleccionar foto</string>
+    
+    <!-- Pycto Terms fragment -->
+    <string name="pycto_terms">\nPara participar en nuestro concurso, una vez te has registrado debes subir una fotografía.\n\nDicha fotografía debe estar geolocalizada con una etiqueta para poder identificar el lugar en el que fue tomada.\n\nFinalmente, para poder votar las fotografías, es condición obligatoria haber subido previamente una.\n\nCuando se vaya a hacer la votación, se deberán seguir unas instrucciones para crear un certificado único para cada participante.\n\nDe esta forma, se asegura que la votación es anónima, y posteriormente se pueden comprovar los votos sin problema en la urna.\n\n\nPuedes contactar con nosotros en:\npycto2014@gmail.com\n\n© 2014 Pycto\nTodos los derechos reservados.\n\n</string>
+    <string name="pycto_terms_title">Bases del concurso</string>
+    
+    <!-- Profile fragment -->
+    <string name="user_email">email.de.prueba@gmail.com</string>
+    <string name="ok_button">Ok</string>
+    <string name="contest_photo">Foto participante en el concurso</string>
     
 </resources>
